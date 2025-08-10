@@ -26,7 +26,7 @@ const Header = () => {
   ];
 
   const secondaryItems = [
-    { name: 'Admin', path: '/admin-dashboard', icon: 'Settings' }
+    // Admin removed from header - only accessible via direct URL
   ];
 
   const isActivePath = (path) => {

@@ -19,6 +19,10 @@ import PublicPortfolio from "./pages/public-portfolio";
 import ProjectDetails from "./pages/project-details";
 import Contact from "./pages/contact";
 
+// Admin components
+import AdminRoute from "./components/AdminRoute";
+import AdminLogin from "./pages/admin/Login";
+
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -35,6 +39,17 @@ const Routes = () => {
           {/* Auth routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          
+          {/* Admin routes */}
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route 
+            path="/admin-dashboard" 
+            element={
+              <AdminRoute>
+                <AdminDashboard />
+              </AdminRoute>
+            } 
+          />
           
           {/* Portfolio routes */}
           <Route path="/portfolio" element={<PublicPortfolio />} />
