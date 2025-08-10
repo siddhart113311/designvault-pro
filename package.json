@@ -2,13 +2,16 @@
   "name": "designer-portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://siddhart113311.github.io/designvault-pro",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start": "vite",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@dhiwise/component-tagger": "^1.0.0",
@@ -46,6 +49,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.1",
     "vite": "^5.2.0",
